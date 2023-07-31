@@ -1,0 +1,139 @@
+body{
+    background-color: $color-primary;
+    @include reset-list;
+    font-family: 'Raleway', sans-serif;
+}
+
+.image1{
+    margin-top: 280px;
+}
+
+.blocp{
+    @include positionner;
+    width: 650px;
+    height: 150px;
+    display: flex;
+    gap: 1rem;
+    .blocd{
+        width: 230px;
+        height: 130px;
+        margin-top: 20px;
+        background-color: $color1;
+        border-radius: .5rem 5rem .5rem .5rem;
+        .logo{
+    
+            @include reset-list;
+            padding: 30px;
+        }
+        .dossier{
+            @include reset-list;
+            display: flex;
+            margin: -12px 30px;
+            gap: .5rem;
+            .dos1{
+                @include center;
+                background-color: $color-primary;
+                width: 30px;
+                height: 30px;
+                border-radius: .3rem;
+            }
+            .dos2{
+                @extend .dos1;
+            }
+            
+            .dos3{
+                @extend .dos1;
+            }
+        }    
+    }
+    .blocg{
+        width: 400px;
+        height: 100px;
+        margin-top: 50px;
+        border-radius: .5rem;
+        background-color: $color1;
+        display: flex;
+        .blanc h3{
+            @include center;
+            @include positionner2;
+            @include reset-list;
+            margin-left: 250px;
+            margin-top: -30px;
+            width: 95px;
+            height: 42px;
+            //font-family: Raleway, sans-serif;
+            font-weight: 700;
+            border-radius: .4rem .4rem 0rem .4rem;
+            background: $first-color;
+            gap: .5rem;
+            font-size: 23px;
+            mark{
+                color: $second-color;
+                font-size: 8px;
+                margin-left: -5px;
+            }
+            &::before{
+                position: absolute;
+                content: '';
+                background-color: $first-color;
+                width: 15%;
+                height: 40%;
+                top: 31px;
+                left: 81px;
+                transform: skewY(40deg);
+            }
+        }
+        .int{
+            padding: 5px 0px 0px 25px;
+        }
+        mark{
+            background: none;
+            color: $first-color;
+        }
+        h4{
+            color: $second-color;
+            font-size: 14px;
+        }
+    }
+    .long{
+        @include positionner2;
+        width: 350px;
+        height: 10px;
+        margin-left: 120px;
+        border-radius: 1rem;
+        margin-top: 35px;
+        background: $fourth-color;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 285px;
+            height: 10px;
+            border-radius: 1rem;
+            background: $sixcolor;
+        }
+        .petitrond{
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: $fourth-color;
+            border-radius: 50%;
+            margin-left: 275px;
+            background: $first-color;
+            margin-top: 1px;
+        }
+        .gb{
+            display: flex;
+            justify-content: space-between;
+            h4{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
