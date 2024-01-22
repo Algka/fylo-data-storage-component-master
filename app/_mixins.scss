@@ -1,0 +1,42 @@
+$breakpoints-up: ("medium": "575px", "large": "1000px", "xlarge": "1400px");
+
+$breakpoints-down: ("small": "574px", "medium": "999px", "large": "1399px");
+
+
+@mixin breakpoint-up($size) {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size){
+    @media (max-width: map-get($breakpoints-down, $size)) {
+        @content;
+    }
+}
+
+
+@mixin reset-list{
+    margin: 0;
+    padding: 0;
+}
+
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin positionner($x:43%, $y:40%){
+    position: absolute;
+    top: $x;
+    left: $y;
+    transform: translate(-$x, -$y);
+}
+
+@mixin positionner2($x:50%, $y:50%){
+    position: absolute;
+    top: $x;
+    left: $y;
+    transform: translate(-$x, -$y);
+}
